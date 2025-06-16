@@ -1,0 +1,11 @@
+{
+  "name": "random-image-redirector",
+  "description": "Auto-generate images.json on commit",
+  "scripts": {
+    "prepare": "husky install",
+    "generate": "node js/generate-images-json.js"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7"
+  }
+}

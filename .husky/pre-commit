@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# Check if images/ folder has changes staged for commit
+if git diff --cached --quiet --exit-code -- images/; then
+  echo "No changes in images/, skipping images.json generation."
+  exit 0
+fi
+
+npm run generate && git add data/images.json
